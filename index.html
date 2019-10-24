@@ -5,66 +5,52 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/927b51fa66.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <!--        <img src="img/bean-nav-background.jpg" class="nav w-100">-->
-        <h1 class="display-4">Nico and Jacob's Awesome Coffee Thing</h1>
-        <p class="lead">Boop.</p>
+
+<nav id="na1" class="navbar"></nav>
+<nav class="navbar navbar-light display-4 d-flex justify-content-center">
+        COFFEE HAPPY FUN FUN!
+    <a href="https://google.com" style="margin-left:auto" class="mr-4"><i class="fab fa-twitter"></i></a>
+    <a href="https://twitter.com" class="mr-4"><i class="fab fa-instagram"></i></a>
+    <a href="https://codeup.com" class="mr-4"><i class="fab fa-youtube"></i></a>
+</nav>
+
+<div class="col" id="yes">
+    <div class="container w-50 d-flex justify-content-center">
+        <form class="d-flex justify-content-around align-items-end">
+            <label>
+                <div class="input-group">
+                    <div class="input-group-prepend mt-5">
+                        <input id="inputCoffee" type="text" class="form-control mt-5"
+                               aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </div>
+            </label>
+            <label for="roast-selection"></label>
+            <select id="roast-selection" class="btn w-50">
+                <option>Light</option>
+                <option>Medium</option>
+                <option>Dark</option>
+            </select>
+            <input id="submit" type="submit"/>
+        </form>
     </div>
 </div>
-
-<nav class="navbar navbar-light bg-dark">
-    <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Coffee
-    </a>
-</nav>
-<div class="d-flex justify-content-center">
-<div class="container w-80 p-0 m-0" id="container">
+<div class="container" id="container">
     <div class="row">
-        <div class="col w-100 p-0 ml-5">
-            <div class="container w-100 p-0 m-0">
+        <div class="col p-0 ml-5">
+            <div class="container p-0 m-0">
                 <div class="row m-0 p-0">
-                    <div class="col m-1 p-5 d-flex flex-wrap " id="coffees">
+                    <div class="col m-1 p-5 d-flex flex-wrap" id="coffees">
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="col">
-            <div class="container w-50">
-                <form>
-
-                    <label>
-                        <!--                <input id="inputCoffee" type="text">Input Coffee-->
-                        <div class="input-group mb-6">
-                            <div class="input-group-prepend mt-5">
-                                <!--<input class="input-group-text" id="inputCoffee">Default</input>-->
-                                <input id="inputCoffee" type="text" class="form-control mt-5"
-                                       aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                            </div>
-                        </div>
-                    </label>
-
-
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection" class="btn btn-warning w-50">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-                    </select>
-                    <input id="submit" type="submit"/>
-                </form>
-
-            </div>
-
-        </div>
     </div>
-</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
