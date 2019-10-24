@@ -3,10 +3,10 @@
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<div>' + coffee.id + '</div>';
-    html += '<div>' + coffee.name + '</div>';
-    html += '<div>' + coffee.roast + '</div>';
+    var html = '<div class="card d-flex align-items-center justify-content-center border-0">';
+    html += '<div class="card-body m-3 w-100 d-flex justify-content-center "><img src="bean.png" height="50px" alt="">' + '</div>';
+    html += '<span>' + coffee.name + '</span>';
+    html += '<span>' + coffee.roast + '</span>';
     html += '</div>';
 
     return html;
@@ -58,7 +58,7 @@ function chooseCoffee(){
                 console.log(coffees.name);
                 html = html + renderCoffee(coffees[i]);
             }
-            // tbody.innerHTML = html;
+            tbody.innerHTML = html;
 
         }
 
@@ -67,7 +67,7 @@ function chooseCoffee(){
 
 
 
-inputCoffee.addEventListener("keyup", chooseCoffee);
+document.getElementById("inputCoffee").addEventListener("keyup", chooseCoffee);
 
 
 
@@ -76,6 +76,6 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
-// tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
