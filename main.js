@@ -3,8 +3,8 @@
 
 
 function renderCoffee(coffee) {
-    var html = '<div class="card d-flex align-items-center justify-content-center border-0">';
-    html += '<div class="card-body m-3 w-100 d-flex justify-content-center "><img src="bean.png" height="50px" alt="">' + '</div>';
+    var html = '<div class="card d-flex align-items-center justify-content-center border-2 m-2">';
+    html += '<div class="card-body m-3 w-100 d-flex justify-content-center "><img src="img/bean.png" height="50px" alt="">' + '</div>';
     html += '<span>' + coffee.name + '</span>';
     html += '<span>' + coffee.roast + '</span>';
     html += '</div>';
