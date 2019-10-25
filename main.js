@@ -32,6 +32,15 @@ function updateCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+// function addCoffees(x){
+//     console.log(x.preventDefault());
+//     for(i = 0; i < x coffees.length; i++){
+//
+//     }
+// }
+// var inputCoffee = "Would you like to input a new Coffee?";
+
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light'},
     {id: 2, name: 'Half City', roast: 'Light'},
@@ -49,7 +58,7 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'Dark'},
     {id: 14, name: 'French', roast: 'Dark'}
 ];
-// var coffeeInput =
+
 
 function chooseCoffee(){
     var html = "";

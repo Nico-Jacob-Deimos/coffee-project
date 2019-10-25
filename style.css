@@ -11,6 +11,7 @@
 body {
     background-image: url("img/pexels-photo.jpg");
 
+
 }
 
 #container {
@@ -59,6 +60,13 @@ label {
 #footer {
     background-color: #9f4333;
     height: 150px;
-    margin-bottom: -150px;
+    position: absolute;
+    color: white;
+
+}
+#silo{
+    border-radius: 180px;
+
+
 }
 

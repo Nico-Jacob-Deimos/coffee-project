@@ -13,122 +13,8 @@
    <link rel="stylesheet" href="style.css">
 
 </head>
-<!--HEAD END-->
-
-<!--############################################-->
-<!--<body>
-&lt;!&ndash;BODY END&ndash;&gt;
-
-&lt;!&ndash;############################################&ndash;&gt;
-
-&lt;!&ndash;NAV START&ndash;&gt;
-<nav id="na1" class="navbar"></nav>
-<nav class="navbar navbar-light display-4 d-flex justify-content-center">
-    COFFEE HAPPY FUN FUN!
-    <a href="https://google.com" style="margin-left:auto" class="mr-4"><i class="fab fa-twitter"></i></a>
-    <a href="https://twitter.com" class="mr-4"><i class="fab fa-instagram"></i></a>
-    <a href="https://codeup.com" class="mr-4"><i class="fab fa-youtube"></i></a>
-</nav>
-&lt;!&ndash;NAV END&ndash;&gt;
-
-&lt;!&ndash;############################################&ndash;&gt;
-
-&lt;!&ndash;CONTAINER START&ndash;&gt;
-<div class="col" id="form_container">
-    <form>
-
-        <label>
-
-            <div class="input-group">
-
-                <div class="input-group-prepend mt-5">
-
-                    <input id="inputCoffee" type="text" class="form-control mt-5"
-                           aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-
-            </div>
-
-        </label>
-        <input id="submit" type="submit"/>
-    </form>
-</div>
-
-&lt;!&ndash;SELECT ROAST CARD START&ndash;&gt;
-<div class ="col-6" id="choose">
-<form>
-    <div class="row card bg-dark p-0 m-0">
-
-        <label for="roast-selection">Select Roast</label>
-        <select id="roast-selection" class="form-control">
-            <option>Show All</option>
-            <option>Light</option>
-            <option>Medium</option>
-            <option>Dark</option>
-        </select>
-        <button id="submit" class="form-control mt-4 btn btn-success" type="submit">Submit Search</button>
-    </div>
-</form>
-</div>
-&lt;!&ndash;SELECT CARD END&ndash;&gt;
-
-    <div class="container w-50 d-flex justify-content-center">
-    </div>
-
-<div class="container" id="container">
-    <div class="row">
-        <div class="col p-0 ml-5">
-            <div class="container p-0 m-0">
-                <div class="row m-0 p-0">
-                    <div class="col m-1 p-5 d-flex flex-wrap" id="coffees">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <main id="coffees"></main>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;!&ndash;SCRIPTS&ndash;&gt;
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-<script src="js/coffee-practice.js"></script>
-</body>-->
-
-<!--BODY START-->
 <body>
 
-<!--&lt;!&ndash;Start Top Bar-->
-<!--<div id="top-bar-sticky" class="bar-sticky">-->
-<!--    <div class="top-bar">-->
-<!--        Start Container for NavBar-->
-<!--        <div class="container"></div>-->
-<!--        End Container for NavBar-->
-<!--    </div>-->
-<!--</div>-->
-<!--End Top Bar&ndash;&gt;-->
-<!--&lt;!&ndash;############################################&ndash;&gt;-->
-
-<!--START MAIN NAV BAR-->
 <nav
   class="navbar mb-5 navbar-light sticky-top text-light text-monospace display-4 d-flex justify-content-center align-items-center border">
    COFFEE HAPPY FUN FUN!
@@ -140,26 +26,14 @@
 </nav>
 <!--END MAIN NAVBAR-->
 
-
-<!--DROPDOWN AND SEARCH BTN START-->
-<!--            <form>-->
-<!--                <label for="roast-selection">-->
-<!--                    <select id="roast-selection" class="btn w-50">-->
-<!--                        <option>Light</option>-->
-<!--                        <option>Medium</option>-->
-<!--                        <option>Dark</option>-->
-<!--                        <input id="submit" type="submit"/>-->
-<!--                    </select>-->
-
-<!--                </label>-->
-<!--            </form>-->
-<!--DROPDOWN AND SEARCH BTN END-->
-
 <!--MAIN BODY CONTAINER START-->
 <div class="container w-50 shadow d-flex justify-content-center" id="container">
 
    <!--WHAT KIND OF COFFEE? START-->
    <div class="container m-0 p-0">
+      <div class="silo_img d-flex justify-content-center">
+         <img src="img/silo_burned.png" id="silo">
+      </div>
 
       <form>
          <div class="input-group">
@@ -171,7 +45,7 @@
                          aria-describedby="inputGroup-sizing-default">
                   <!-- DROPDOWN AND SEARCH BTN START--><!---->
                   <form>
-                     <div class="d-flex justify-content-start align-items-center">
+                     <div class="d-flex justify-content-start align-items-center shadow">
                         <label>
                            <select id="roast-selection" class="">
                               <option>Light</option>
