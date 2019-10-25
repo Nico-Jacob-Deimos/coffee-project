@@ -1,16 +1,64 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
+
+/*imports end*/
+
 * {
     margin: 0;
     padding: 0;
 }
-
-#container, #yes, .btn,{
-    background-color: #efd7ca;
+body {
+    background-image: url("img/pexels-photo.jpg");
 
 }
-.navbar{
-    height: 5vw;
-    color: #5c2018;
-    background-color: #d4a59a;
 
+#container {
+    background-color: #BA512F;
+    border: 2px solid #9F4333;
+    border-radius: 25px;
+    border: 2px solid white;
+
+
+}
+
+#coffees, .coffee-card {
+    background-color: #C18242;
+    border-radius: 25px;
+    border: 2px solid white;
+
+}
+
+
+.mr-4 {
+    color: black;
+}
+
+#inputCoffee {
+    border-radius: 25px;
+
+}
+
+.navbar {
+    height: 6vw;
+    background-color: #9F4333;
+}
+
+#submit{
+    border-radius: 5px;
+    width: 100px;
+    height: 23px;
+    margin-top: .1em;
+
+
+}
+label {
+    padding: 0;
+    margin: 0;
+}
+#footer {
+    background-color: #9f4333;
+    height: 150px;
+    margin-bottom: -150px;
 }
 
