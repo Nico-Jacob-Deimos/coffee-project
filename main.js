@@ -1,46 +1,39 @@
 "use strict";
 
+//this function takes the inputted coffee name and roast and adds it to the array
+var pushToArray = function () {
+    coffees.push(createNewCoffeeObject());
+    //if we want to manually assign just this id #, but it's at the end of the object
+    coffees[coffees.length - 1].id = (coffees.length - 1);
+    console.log(coffees);
+};
+
+// this function keeps the submitNewCoffee button from actually submitting anything, merely reloading JS
+var noSubmit = function (e) {
+    e.preventDefault();
+};
 
 
-function renderCoffee(coffee) {
+//this creates a new object based on user input
+function createNewCoffeeObject(name, roast) {
+    var newCoffeeObject = {};
+    newCoffeeObject.name = document.getElementById("addCoffee").value;
+    newCoffeeObject.roast = document.getElementById('newCoffeeSelection').value;
+    return newCoffeeObject;
+}
+
+//this is me trying to make the new beans pop up but FAILING
+function renderNewObject(createNewCoffeeObject) {
     var html = '<div class="coffee-card card d-flex align-items-center border-0 m-2">';
     html += '<div class="card-body m-3 w-100 d-flex justify-content-center "><img src="img/bean.png" height="50px" alt="">' + '</div>';
-    html += '<span>' + coffee.name + '</span>';
-    html += '<span>' + coffee.roast + '</span>';
+    html += '<span>' + createNewCoffeeObject.name + '</span>';
+    html += '<span>' + createNewCoffeeObject.roast + '</span>';
     html += '</div>';
 
     return html;
-}
+};
 
-function renderCoffees(coffees) {
-    var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast || selectedRoast === "all") {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-// function addCoffees(x){
-//     console.log(x.preventDefault());
-//     for(i = 0; i < x coffees.length; i++){
-//
-//     }
-// }
-// var inputCoffee = "Would you like to input a new Coffee?";
-
-
+// #coffeeArray
 var coffees = [
     {id: 1, name: 'Light City', roast: 'Light'},
     {id: 2, name: 'Half City', roast: 'Light'},
@@ -48,8 +41,7 @@ var coffees = [
     {id: 4, name: 'City', roast: 'Medium'},
     {id: 5, name: 'American', roast: 'Medium'},
     {id: 6, name: 'Breakfast', roast: 'Medium'},
-    {id: 7, name: 'High',
-        roast: 'dark'},
+    {id: 7, name: 'High', roast: 'dark'},
     {id: 8, name: 'Continental', roast: 'Dark'},
     {id: 9, name: 'New Orleans', roast: 'Dark'},
     {id: 10, name: 'European', roast: 'Dark'},
@@ -59,21 +51,69 @@ var coffees = [
     {id: 14, name: 'French', roast: 'Dark'}
 ];
 
+// this triggers the new object event upon clicking submit
+document.getElementById("submitNewCoffee").addEventListener("click", noSubmit);
+document.getElementById("submitNewCoffee").addEventListener("click", pushToArray);
 
-function chooseCoffee(){
+//these next two don't work because second parameter is not an object
+document.getElementById("submitNewCoffee").addEventListener("click", renderNewObject);
+console.log(coffees);
+
+//this turns the entire array of coffees (including newly added coffees) to a string
+var stringCoffees = JSON.stringify(coffees);
+
+// this stores it in localstorage (the cloud)
+localStorage.setItem("locallyStoredCoffee", stringCoffees);
+
+// this takes it from the cloud and turns it back into array
+var objectifiedStringCoffees = JSON.parse(localStorage.getItem("locallyStoredCoffee"));
+
+//this generates cards for each bean and stores as html
+function renderCoffee(coffee) {
+    var html = '<div class="coffee-card card d-flex align-items-center border-0 m-2">';
+    html += '<div class="card-body m-3 w-100 d-flex justify-content-center "><img src="img/bean.png" height="50px" alt="">' + '</div>';
+    html += '<span>' + coffee.name + '</span>';
+    html += '<span>' + coffee.roast + '</span>';
+    html += '</div>';
+    return html;
+}
+
+// this goes through the array of bean cards and stores it as html, which is displayed in id "coffees"
+function renderCoffees(coffees) {
+    var html = '';
+    for (var i = coffees.length - 1; i >= 0; i--) {
+        html += renderCoffee(coffees[i]);
+    }
+    return html;
+}
+
+// this is the functionality of the first submit button
+function updateCoffees(e) {
+    // this updates javascript without submitting form
+    e.preventDefault();
+    var selectedRoast = roastSelection.value;
+    var filteredCoffees = [];
+    coffees.forEach(function (coffee) {
+        if (coffee.roast === selectedRoast || selectedRoast === "all") {
+            filteredCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+// this is the sort function for finding the right coffee
+function chooseCoffee() {
     var html = "";
-    for(var i = 0; i < coffees.length; i++) {
-        if (coffees[i].name.toLowerCase().includes(inputCoffee.value.toLowerCase())) {
+    for (var i = 0; i < coffees.length; i++) {
+        if (coffees[i].name.toLowerCase().includes(document.getElementById("inputCoffee").value.toLowerCase())) {
             console.log(coffees.name);
             html = html + renderCoffee(coffees[i]);
         }
         tbody.innerHTML = html;
-
     }
-
 }
 
-
+//this allows for sorting upon keystroke
 document.getElementById("inputCoffee").addEventListener("keyup", chooseCoffee);
 
 var tbody = document.querySelector('#coffees');

@@ -4,12 +4,8 @@
 <head>
    <meta charset="UTF-8">
    <title></title>
-   <link rel="stylesheet"
-         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-         crossorigin="anonymous">
-   <script src="https://kit.fontawesome.com/927b51fa66.js"
-           crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://kit.fontawesome.com/927b51fa66.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="style.css">
 
 </head>
@@ -59,6 +55,27 @@
                   <!--DROPDOWN AND SEARCH BTN END-->
                </div>
             </div>
+
+            <!-- ADD COFFEE BEGIN-->
+
+
+            <form style="margin-left: auto">
+               <label for="addCoffee">Create Your Own Coffee:</label>
+               <input id="addCoffee" placeholder="Type Coffee Name Here" type="text" class="form-control">
+               <div class="d-flex justify-content-start align-items-center shadow">
+                  <label>What Kind of Roast Would You Like it to Be?
+                     <select id="newCoffeeSelection" class="">
+
+                        <option>all</option>
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option value="dark">Dark</option>
+                     </select>
+                  </label>
+                  <input id="submitNewCoffee" type="submit"
+                          class="fixed ml-2 pb-4 d-flex justify-content-center">
+               </div>
+            </form>
          </div>
       </form>
       <div class="box d-flex justify-content-center mb-3 m-1">
@@ -77,7 +94,8 @@
       </div>
    </div>
 </div>
-<!--WHAT KIND OF COFFEE? END-->
+
+<!--WHAT KIND OF COFFEE WOULD YOU LIKE TO MAKE? END-->
 
 <div id="footer" class="mt-5 w-100 d-flex align-items-center">
    <img src="img/animals.jpeg" alt="" height="100px" class="ml-4">

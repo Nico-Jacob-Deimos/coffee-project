@@ -1,6 +1,6 @@
-@import "compass/css3";
+/*@import "compass/css3";*/
 
-@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
+/*@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);*/
 
 /*imports end*/
 
@@ -16,7 +16,6 @@ body {
 
 #container {
     background-color: #BA512F;
-    border: 2px solid #9F4333;
     border-radius: 25px;
     border: 2px solid white;
 
@@ -52,6 +51,10 @@ body {
     margin-top: .1em;
 
 
+}
+#submitNewCoffee{
+    border-radius: 5px;
+    height: 15px;
 }
 label {
     padding: 0;
