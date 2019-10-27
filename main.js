@@ -7,11 +7,12 @@ var pushToArray = function () {
     coffees[coffees.length - 1].id = (coffees.length - 1);
     console.log(coffees);
 };
-
 // this function keeps the submitNewCoffee button from actually submitting anything, merely reloading JS
 var noSubmit = function (e) {
     e.preventDefault();
+
 };
+
 
 
 //this creates a new object based on user input
@@ -21,7 +22,6 @@ function createNewCoffeeObject(name, roast) {
     newCoffeeObject.roast = document.getElementById('newCoffeeSelection').value;
     return newCoffeeObject;
 }
-
 //this is me trying to make the new beans pop up but FAILING
 function renderNewObject(createNewCoffeeObject) {
     var html = '<div class="coffee-card card d-flex align-items-center border-0 m-2">';
@@ -31,10 +31,11 @@ function renderNewObject(createNewCoffeeObject) {
     html += '</div>';
 
     return html;
-};
+}
 
 // #coffeeArray
 var coffees = [
+
     {id: 1, name: 'Light City', roast: 'Light'},
     {id: 2, name: 'Half City', roast: 'Light'},
     {id: 3, name: 'Cinnamon', roast: 'Light'},
@@ -65,8 +66,10 @@ var stringCoffees = JSON.stringify(coffees);
 // this stores it in localstorage (the cloud)
 localStorage.setItem("locallyStoredCoffee", stringCoffees);
 
+
 // this takes it from the cloud and turns it back into array
 var objectifiedStringCoffees = JSON.parse(localStorage.getItem("locallyStoredCoffee"));
+console.log(objectifiedStringCoffees);
 
 //this generates cards for each bean and stores as html
 function renderCoffee(coffee) {
