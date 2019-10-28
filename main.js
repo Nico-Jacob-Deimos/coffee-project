@@ -105,4 +105,3 @@ body.innerHTML = renderCoffees(coffees);
 submitButton.addEventListener('click', updateCoffees);
 addCoffee.addEventListener('click',  updateCoffees);
 
-new WOW().init();

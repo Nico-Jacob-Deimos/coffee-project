@@ -42,7 +42,7 @@ body {
         background-color: #BA512F
     }
     50% {
-        background-color: saddlebrown;
+        background-color: #7d2111;
     }
 }
 
@@ -53,6 +53,7 @@ body {
     animation: bg-animaty 10s infinite;
 
 }
+
 #coffees:hover {
     animation: big-spin 5s ease-in-out;
 }
