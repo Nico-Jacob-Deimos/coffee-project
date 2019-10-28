@@ -7,18 +7,23 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 body {
     background-image: url("img/pexels-photo.jpg");
+    font-family: "Pacifico", curisve, serif;
 
-
+}
+#js-coffee{
+    font-family: "Pacifico", curisve, serif;
+    font-size: 30px;
+    position: absolute;
 }
 
 #container {
     background-color: #BA512F;
     border-radius: 25px;
     border: 2px solid white;
-
 
 }
 
@@ -32,10 +37,13 @@ body {
 
 .mr-4 {
     color: black;
+    font-size: 20px;
+
+
 }
 
 #inputCoffee {
-    border-radius: 25px;
+
 
 }
 
@@ -48,14 +56,14 @@ body {
     border-radius: 5px;
     width: 100px;
     height: 23px;
-    margin-top: .1em;
-
-
 }
+
 #submitNewCoffee{
     border-radius: 5px;
-    height: 15px;
+    width: 100px;
+    height: 23px;
 }
+
 label {
     padding: 0;
     margin: 0;
@@ -68,8 +76,6 @@ label {
 
 }
 #silo{
-    border-radius: 150px;
-
-
+    height: 200px;
 }
 
