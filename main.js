@@ -45,10 +45,10 @@ function renderCoffees(coffees) {
         html += renderCoffee(coffees[i]);
     }
     return html;
-} 
+}
 
 //creates a new coffee
-function addCoffee(){
+function addCoffee() {
     var newCoffeeObject = {};
     newCoffeeObject.name = newCoffeeName.value;
     newCoffeeObject.roast = newCoffeeRoast.value;
@@ -103,5 +103,5 @@ addCoffee = document.querySelector('#newCoffeeSelection');
 body.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-addCoffee.addEventListener('click',  updateCoffees);
+addCoffee.addEventListener('click', updateCoffees);
 

@@ -1,18 +1,14 @@
-/*@import "compass/css3";*/
-
-
-/*imports end*/
-
 * {
     margin: 0;
     padding: 0;
-
 }
+
 body {
     background-image: url("img/pexels-photo.jpg");
     font-family: 'Josefin Sans', sans-serif;
 }
-#js-coffee{
+
+#js-coffee {
     font-family: "Pacifico", curisve, serif;
     font-size: 30px;
     position: absolute;
@@ -25,18 +21,6 @@ body {
     animation: bg-animate 10s infinite linear;
 }
 
-@keyframes big-spin {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(100deg);
-    }
-    66% {
-        transform: rotate(-100deg);
-
-    }
-}
 @keyframes bg-animate {
     0%, 100% {
         background-color: #BA512F
@@ -51,11 +35,6 @@ body {
     border-radius: 25px;
     border: 2px solid white;
     animation: bg-animaty 10s infinite;
-
-}
-
-#coffees:hover {
-    animation: big-spin 5s ease-in-out;
 }
 
 @keyframes bg-animaty {
@@ -69,20 +48,12 @@ body {
     66% {
         background-color: #c18242;
         transform: rotate(-1deg);
-
     }
 }
 
 .mr-4 {
     color: black;
     font-size: 20px;
-
-
-}
-
-#inputCoffee {
-
-
 }
 
 .navbar {
@@ -90,13 +61,13 @@ body {
     background-color: #9F4333;
 }
 
-#submit{
+#submit {
     border-radius: 5px;
     width: 100px;
     height: 23px;
 }
 
-#submitNewCoffee{
+#submitNewCoffee {
     border-radius: 5px;
     width: 100px;
     height: 23px;
@@ -106,13 +77,14 @@ label {
     padding: 0;
     margin: 0;
 }
+
 #footer {
     background-color: #9f4333;
     height: 150px;
     position: absolute;
     color: white;
-
 }
-#silo{
+
+#silo {
     height: 200px;
 }
