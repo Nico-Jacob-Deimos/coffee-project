@@ -48,8 +48,6 @@ function renderCoffees(coffees) {
     return html;
 } 
 
-// this function keeps the submitNewCoffee button from actually submitting anything, merely reloading JS
-
 //creates a new coffee
 function addCoffee(){
     var newCoffeeObject = {};
@@ -58,7 +56,7 @@ function addCoffee(){
     newCoffeeObject.id = coffees.length + 1;
     coffees.push(newCoffeeObject);
     localStorage.setItem("locallyStoredCoffee", JSON.stringify(coffees));
-    tbody.innerHTML = renderCoffees(coffees);
+    body.innerHTML = renderCoffees(coffees);
     return selectionOrder.innerHTML = renderCoffee(coffees);
 }
 
@@ -80,7 +78,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    body.innerHTML = renderCoffees(filteredCoffees);
 }
 
 // this is the sort function for finding the right coffee
@@ -91,21 +89,19 @@ function chooseCoffee() {
             console.log(coffees.name);
             html = html + renderCoffee(coffees[i]);
         }
-        tbody.innerHTML = html;
+        body.innerHTML = html;
     }
 }
 
 //this allows for sorting upon keystroke
 document.getElementById("inputCoffee").addEventListener("keyup", chooseCoffee);
 
-var tbody = document.querySelector('#coffees');
+var body = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var selectionOrder = document.querySelector(("coffee-order"));
 addCoffee = document.querySelector('#newCoffeeSelection');
-tbody.innerHTML = renderCoffees(coffees);
+body.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
-// roastSelection.addEventListener('change', updateCoffees);
 submitButton.addEventListener('click', updateCoffees);
 addCoffee.addEventListener('click',  updateCoffees);
