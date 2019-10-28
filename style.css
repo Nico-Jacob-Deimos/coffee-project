@@ -1,6 +1,5 @@
 /*@import "compass/css3";*/
 
-/*@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);*/
 
 /*imports end*/
 
@@ -11,8 +10,7 @@
 }
 body {
     background-image: url("img/pexels-photo.jpg");
-    font-family: "Pacifico", curisve, serif;
-
+    font-family: 'Josefin Sans', sans-serif;
 }
 #js-coffee{
     font-family: "Pacifico", curisve, serif;
@@ -24,16 +22,55 @@ body {
     background-color: #BA512F;
     border-radius: 25px;
     border: 2px solid white;
+    animation: bg-animate 10s infinite linear;
+}
 
+@keyframes big-spin {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(100deg);
+    }
+    66% {
+        transform: rotate(-100deg);
+
+    }
+}
+@keyframes bg-animate {
+    0%, 100% {
+        background-color: #BA512F
+    }
+    50% {
+        background-color: saddlebrown;
+    }
 }
 
 #coffees, .coffee-card {
     background-color: #C18242;
     border-radius: 25px;
     border: 2px solid white;
+    animation: bg-animaty 10s infinite;
 
 }
+#coffees:hover {
+    animation: big-spin 5s ease-in-out;
+}
 
+@keyframes bg-animaty {
+    0%, 100% {
+        background-color: #C18242
+    }
+    33% {
+        background-color: whitesmoke;
+        transform: rotate(1deg);
+    }
+    66% {
+        background-color: #c18242;
+        transform: rotate(-1deg);
+
+    }
+}
 
 .mr-4 {
     color: black;
@@ -78,4 +115,3 @@ label {
 #silo{
     height: 200px;
 }
-

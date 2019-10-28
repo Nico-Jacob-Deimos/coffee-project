@@ -1,6 +1,5 @@
 "use strict";
 
-
 // #coffeeArray
 var coffees;
 if (localStorage.getItem('locallyStoredCoffee') === null) {
@@ -105,3 +104,5 @@ body.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 addCoffee.addEventListener('click',  updateCoffees);
+
+new WOW().init();
